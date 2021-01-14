@@ -54,7 +54,8 @@ const ContainerProyecto = styled.div`
 const Image = styled.img`
     object-fit: cover;
     width: 100%;
-`
+` 
+
 
 const Titulo = styled.h1`
     font-size: 24px;
