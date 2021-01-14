@@ -30,21 +30,6 @@ const Parrafo = styled.p`
     }
 `
 
-const ContainerArrow = styled.div`
-    color: white;
-    text-decoration: none;
-`
-
-const Arrow = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 10% 0 10%;
-    @media (min-width: 768px){
-        margin: 20px 30% 0 30%
-    }
-    
-`
-
 const ArrowUp = styled.div`
     color: rgba(201, 201, 201, 0.638);
     position: absolute;
@@ -90,7 +75,8 @@ const Button = styled.a`
   background-color: transparent;
   color: white;
   border: 2px solid white;
-  transition: all .5s  ;
+  transition: all .5s;
+  text-decoration: none;
   &:hover{
     background-color: white;
     color: black;
@@ -111,8 +97,8 @@ const Curso = () => {
                     ComunidadIT me comunicó que había calificado para una de sus becas, así que elegí aprender React.JS
                 </Parrafo>
             </Bounce>
-            <ArrowUp><Fade><Link to="/"><KeyboardArrowUpIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowUp"/></Link></Fade>Home</ArrowUp>
-            <ArrowDown>Tecnologías<Fade><Link to="/technologies/"><KeyboardArrowDownIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowDown"/></Link></Fade></ArrowDown>
+            <ArrowUp><Fade><Link to="/portfolio/"><KeyboardArrowUpIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowUp"/></Link></Fade>Home</ArrowUp>
+            <ArrowDown>Tecnologías<Fade><Link to="/portfolio/technologies/"><KeyboardArrowDownIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowDown"/></Link></Fade></ArrowDown>
             <Bounce right>
                 <Download><Parrafo2>¿Querés descargar mi CV?</Parrafo2> <Bounce bottom><Button href={CV} download>Download</Button> </Bounce></Download>
             </Bounce>

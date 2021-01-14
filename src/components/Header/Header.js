@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-import Links from './Links';
-import {Bounce,Fade} from 'react-reveal/';
+import {Fade} from 'react-reveal/';
 import BurgerMenu from './BurgerMenu';
 
 const Navbar = styled.header`
@@ -65,7 +64,8 @@ const Header = () => {
 
     window.addEventListener('scroll', changeBackground)    
 
-    return ( 
+    return (
+        <> 
         <Navbar className={(navbar) ? "navbarActive" : "navbar"}>
             <Fade top> 
                 <Logo>
@@ -74,24 +74,24 @@ const Header = () => {
             </Fade>
             <Nav>
                 <Fade top>
-                    <Link href="/"> Home </Link>
+                    <Link href="/portfolio/"> Home </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="/about"> Sobre mi </Link>
+                    <Link href="/portfolio/about"> Sobre mi </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="/technologies"> Tecnologías </Link>
+                    <Link href="/portfolio/technologies"> Tecnologías </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="#"> Proyectos </Link>
+                    <Link href="/portfolio/projects"> Proyectos </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="#"> Contáctame </Link>
+                    <Link href="/portfolio/contact"> Contáctame </Link>
                 </Fade>
             </Nav> 
-
             <BurgerMenu />
         </Navbar>
+        </>
     );
 }
  

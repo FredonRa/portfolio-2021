@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from "framer-motion";
-import {Fade, Bounce} from 'react-reveal/';
+import { motion } from "framer-motion";
+import {Bounce} from 'react-reveal/';
 
 const Titulo = styled.h1`
     top: 40px;
@@ -73,7 +73,7 @@ const Bienvenido = () => {
 
                 <Container>
                 <Bounce left>
-                    <Titulo>¡Bienvenido!</Titulo>
+                    <Titulo>¡Bienvenid@!</Titulo>
                 </Bounce>
                     <div>
                         <Bounce right>
@@ -84,7 +84,7 @@ const Bienvenido = () => {
                         <Bounce bottom>
                             <ContainerArrow>
                                 <Arrow>
-                                    <Link to="/about/education">
+                                    <Link to="/portfolio/about/education">
                                         <KeyboardArrowRightIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowRight"/>
                                     </Link>
                                 </Arrow>

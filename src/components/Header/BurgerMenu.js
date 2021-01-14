@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
@@ -9,7 +8,6 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   text-align: left;
-  /* padding: 2rem; */
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +16,6 @@ const StyledMenu = styled.nav`
   
     @media (max-width: 576px) {
       width: 100%;
-      /* padding-left: 50px; */
     }
 
     @media (min-width: 576px) {
@@ -58,19 +55,19 @@ const Menu = ({ open }) => {
     <StyledMenu open={open}>
               <div id='stars' />
 
-        <a href="/">
+        <a href="/portfolio/">
             Home
         </a>
-        <a href="/about">
+        <a href="/portfolio/about">
             Sobre Mi
         </a>
-        <a href="/technologies">
+        <a href="/portfolio/technologies">
             Tecnologías
         </a>
-        <a href="/technologies">
+        <a href="/portfolio/projects">
             Proyectos
         </a>
-        <a href="/technologies">
+        <a href="/portfolio/contact">
             Contáctame
         </a>
     </StyledMenu>
@@ -149,21 +146,3 @@ const BurgerMenu = () => {
 }
 
 export default BurgerMenu;
-
-const useOnClickOutside = (ref, handler) => {
-    React.useEffect(() => {
-      const listener = event => {
-        if (!ref.current || ref.current.contains(event.target)) {
-          return;
-        }
-        handler(event);
-      };
-      document.addEventListener('mousedown', listener);
-  
-      return () => {
-        document.removeEventListener('mousedown', listener);
-      };
-    },
-    [ref, handler],
-    );
-  };

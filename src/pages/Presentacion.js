@@ -1,19 +1,12 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Video from '../components/Background/Video';
-import {Fade, Bounce} from 'react-reveal/';
+import {Bounce} from 'react-reveal/';
 import { useDencrypt } from "use-dencrypt-effect";
 import {
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
   import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-  import { AnimatePresence, motion } from "framer-motion";
-
-  import { AnimatedSwitch } from 'react-router-transition';
-import ArrowsLinks from '../components/Arrows/ArrowsLinks';
-
+  import { motion } from "framer-motion";
 
 const Container = styled.div`
     display: flex;
@@ -70,30 +63,23 @@ const Presentacion = () => {
     return ( 
 
         <Bounce bottom>
-
-
-        <motion.div
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        >
-
-        <Container>
-            {/* <Fade>
-                <Video />
-            </Fade> */}
-            <Presentation>
-                    <Nombre>Federico Iván Leiva</Nombre>
-                <Profesion>{result}</Profesion>
-                <div>
-                    <SaberMas>Saber más</SaberMas>
-                    <Link to="/about"><KeyboardArrowDownIcon className="arrow" style={{ fontSize: 60 }}/></Link>
-                </div>
-            </Presentation>
-            {/* <ArrowsLinks /> */}
-        </Container>
-        </motion.div>
+            <motion.div
+            initial="initial"
+            animate="in"
+            exit="out"
+            variants={pageVariants}
+            >
+                <Container>
+                    <Presentation>
+                        <Nombre>Federico Iván Leiva</Nombre>
+                        <Profesion>{result}</Profesion>
+                        <div>
+                            <SaberMas>Saber más</SaberMas>
+                            <Link to="/portfolio/about"><KeyboardArrowDownIcon className="arrow" style={{ fontSize: 60 }}/></Link>
+                        </div>
+                    </Presentation>
+                </Container>
+            </motion.div>
         </Bounce>
     );
 }

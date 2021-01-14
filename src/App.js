@@ -1,20 +1,18 @@
 import './App.css';
 import Header from './components/Header/Header';
 import {
-  Switch,
   Route,
-  Link,
-  BrowserRouter as Router,
 } from "react-router-dom";
 
 import Presentacion from './pages/Presentacion';
-import SobreMi from './pages/SobreMi'
 import { spring, AnimatedSwitch } from 'react-router-transition';
 import Technologies from './pages/Technologies'
 import Bienvenido from './components/SobreMi/Bienvenido';
 import Education from './components/SobreMi/Education';
 import Course from './components/SobreMi/Course';
 import Proyectos from './pages/Proyectos';
+import Contactame from './pages/Contactame';
+
 function bounce(val) {
   return spring(val, {
     stiffness: 400,
@@ -52,15 +50,14 @@ function App() {
               atLeave={bounceTransition.atLeave}
               atActive={bounceTransition.atActive}
             >
-              <Route exact path="/" component={Presentacion}/>
-              {/* <Route exact path="/about/" component={SobreMi}/> */}
-              <Route exact path="/technologies/" component={Technologies}/>
-              <Route exact path="/about/" component={Bienvenido} />
-              <Route exact path="/about/education" component={Education} />
-              <Route exact path="/about/course" component={Course} />
-              <Route exact path="/projects" component={Proyectos}/>
-
-         </AnimatedSwitch>
+              <Route exact path="/portfolio/" component={Presentacion}/>
+              <Route exact path="/portfolio/technologies/" component={Technologies}/>
+              <Route exact path="/portfolio/about/" component={Bienvenido} />
+              <Route exact path="/portfolio/about/education" component={Education} />
+              <Route exact path="/portfolio/about/course" component={Course} />
+              <Route exact path="/portfolio/projects" component={Proyectos}/>
+              <Route exact path="/portfolio/contact" component={Contactame}/>
+            </AnimatedSwitch>
     </div>
   );
 }

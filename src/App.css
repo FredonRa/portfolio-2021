@@ -12,6 +12,7 @@ html {
 
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -192,4 +193,45 @@ html {
   color: white;
   cursor: pointer;
   transition: all .5s ease-in;
+}
+
+.button {
+  transform: translate(-300%,0%);
+  z-index: 100;
+  right: 200px;
+  background-color: white;
+  transition: all .5s;
+}
+
+.button:hover{
+  background: green;
+  color: white;
+}
+
+.containerProyecto{
+  opacity: 100%;
+  transition: all .2s;
+}
+.containerProyecto:hover {
+  /* opacity: 60%; */
+  transition: all .5s;
+}
+
+
+.containerProyecto:hover .button {
+  transform: translate(0,0);
+  transition: all .2s;
+  /* animation: MoveRight 1s linear infinite; */
+
+}
+
+.carusel{
+  /* background: red; */
+  width: 100%;
+}
+
+@media (min-width: 996px) {
+  .carusel{
+    display: none;
+  }
 }

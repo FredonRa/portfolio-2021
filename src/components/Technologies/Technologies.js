@@ -9,7 +9,7 @@ import git from '../../img/git.png';
 import npm from '../../img/npm.png';
 import styledFoto from '../../img/styled.png'
 import styled from 'styled-components';
-import {Bounce, LightSpeed, Fade} from 'react-reveal'
+import {Fade} from 'react-reveal'
 
 
 const Imagen = styled.img`

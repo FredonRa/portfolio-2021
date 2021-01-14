@@ -43,8 +43,6 @@ const Arrow = styled.div`
     @media (min-width: 768px){
         margin: 20px 30% 0 30%
     }
-    
-
 `
 
 const Education = () => {
@@ -65,7 +63,7 @@ const Education = () => {
                     <Bounce right>
                         <ContainerArrow>
                                 <Arrow>
-                                    <Link to="/about/course">
+                                    <Link to="/portfolio/about/course">
                                         <KeyboardArrowRightIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowRight"/>
                                     </Link>
                                 </Arrow>

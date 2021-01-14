@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
-import {Fade, Bounce} from 'react-reveal/';
-
 
 ReactDOM.render(
   <React.StrictMode>
