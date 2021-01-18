@@ -17,23 +17,27 @@ const Container = styled.div`
 `
 
 const Titulo = styled.h1`
-    color: white;
+    font-size: 20px;
+    @media (min-width: 768px){
+        font-size: 28px;
+    }
 `
 
 const Parrafo = styled.p`
-    font-size: 22px;
+    font-size: 18px;
     color: white;
     font-weight: 500;
     margin: 20px 10% 0 10%;
     @media (min-width: 768px){
-        margin: 20px 30% 0 30%
+        margin: 20px 30% 0 30%;
+        font-size: 22px;
     }
 `
 
 const ArrowUp = styled.div`
     color: rgba(201, 201, 201, 0.638);
     position: absolute;
-    top: 5%;
+    top: 10%;
     transition: all .1s linear .1s;
     :hover{
         color: white;
@@ -44,7 +48,7 @@ const ArrowUp = styled.div`
 const ArrowDown = styled.div`
     color: rgba(201, 201, 201, 0.638);
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     transition: all .1s linear .1s;
     :hover{
         color: white;
@@ -92,9 +96,9 @@ const Curso = () => {
             </Bounce>
             <Bounce left>
                 <Parrafo>
-                    Una vez finalizada la cursada en 2019, comencé a ver desarrollo web por mi cuenta, y ahí fue cuando
-                    me encantó. En 2020 Seguí reforzando HTML y CSS, y dando mis primeros pasos en JavaScript. A fines de Agosto, 
-                    ComunidadIT me comunicó que había calificado para una de sus becas, así que elegí aprender React.JS
+                    Finalizando el colegio en 2019, comencé a ver desarrollo web por mi cuenta, y ahí fue cuando
+                    me encantó. En 2020 Seguí reforzando, y dando mis primeros pasos en JavaScript. A fines de Agosto, 
+                    ComunidadIT me ofreció una de sus becas, así que elegí aprender React.JS
                 </Parrafo>
             </Bounce>
             <ArrowUp><Fade><Link to="/portfolio/"><KeyboardArrowUpIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowUp"/></Link></Fade>Home</ArrowUp>

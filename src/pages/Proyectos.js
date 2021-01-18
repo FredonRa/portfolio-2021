@@ -1,56 +1,95 @@
 import React from 'react';
 import styled from 'styled-components';
-import DivProyectos from '../components/Proyectos/Proyectos';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import {Fade} from 'react-reveal/';
-import { Link } from 'react-router-dom';
-
+import findyou from '../img/findyou.png';
+import weather from '../img/weather.png';
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
-    min-height: 100vh;
-    `
-
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
 const Titulo = styled.h1`
+    font-size: 20px;
     color: white;
-`
-
-const ArrowUp = styled.div`
-    color: rgba(201, 201, 201, 0.638);
-    position: absolute;
-    top: 5%;
-    transition: all .1s linear .1s;
-    :hover{
-        color: white;
-        transition: all .1s linear .1s;
+    @media (min-width: 768px){
+        font-size: 28px;
     }
 `
 
-const ArrowDown = styled.div`
-    color: rgba(201, 201, 201, 0.638);
-    position: absolute;
-    bottom: 5%;
-    transition: all .1s linear .1s;
-    :hover{
-        color: white;
-        transition: all .1s linear .1s;
-    }
+const ContainerProyecto = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
 `
 
+const Proyecto = styled.div`
+    width: 350px;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+`
+
+const TituloProyecto = styled.h2`
+    font-size: 18px; 
+`
+
+const Image = styled.img`
+    width: 100%;
+    object-fit: cover;
+`
+
+const Descripcion = styled.p`
+    font-size: 17px;
+    color: black;
+`
+
+const Tecnologias = styled.p`
+    font-size: 15px;
+    color: black;
+    margin: 15px 15px;
+`
+
+const Separador = styled.hr`
+    width: 90%;
+    margin: 0 auto;
+`
+
+const Button = styled.button`
+    background: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+`
+
+const Link = styled.a`
+    text-decoration: none;
+`
 
 const Proyectos = () => {
-    return (  
+    return ( 
         <Container>
-            <Titulo>
-                Proyectos    
-            </Titulo>
-            <DivProyectos />
-            <ArrowUp><Fade><Link to="/portfolio/technologies"><KeyboardArrowUpIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowUp"/></Link></Fade>Tecnologías</ArrowUp>
-            <ArrowDown>Contáctame<Fade><Link to="/portfolio/contact"><KeyboardArrowDownIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowDown"/></Link></Fade></ArrowDown>
+            <Titulo>Proyectos</Titulo>
+            <ContainerProyecto>
+                <Proyecto className="containerProyecto">
+                    <TituloProyecto>Find You App</TituloProyecto>
+                    <Image src={findyou} />
+                    <Descripcion>App web para reportar personas</Descripcion>
+                    <Separador />
+                    <Tecnologias>React.js - MaterialUI - Firebase - Firestore - Storage - API</Tecnologias>
+
+                </Proyecto>
+                <Proyecto className="containerProyecto">
+                    <TituloProyecto>Weather App</TituloProyecto>
+                    <Image src={weather} />
+                    <Descripcion>App web consultar el clima</Descripcion>
+                    <Separador />
+                    <Tecnologias>React.js - Styled Components - API - Framer Motion</Tecnologias>
+                </Proyecto>
+            </ContainerProyecto>
         </Container>
     );
 }

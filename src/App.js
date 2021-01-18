@@ -12,6 +12,7 @@ import Education from './components/SobreMi/Education';
 import Course from './components/SobreMi/Course';
 import Proyectos from './pages/Proyectos';
 import Contactame from './pages/Contactame';
+import Trabajos from './pages/Trabajos';
 
 function bounce(val) {
   return spring(val, {
@@ -53,10 +54,10 @@ function App() {
               <Route exact path="/portfolio/" component={Presentacion}/>
               <Route exact path="/portfolio/technologies/" component={Technologies}/>
               <Route exact path="/portfolio/about/" component={Bienvenido} />
-              <Route exact path="/portfolio/about/education" component={Education} />
-              <Route exact path="/portfolio/about/course" component={Course} />
-              <Route exact path="/portfolio/projects" component={Proyectos}/>
-              <Route exact path="/portfolio/contact" component={Contactame}/>
+              <Route exact path="/portfolio/about/education/" component={Education} />
+              <Route exact path="/portfolio/about/course/" component={Course} />
+              <Route exact path="/portfolio/projects/" component={Trabajos}/>
+              <Route exact path="/portfolio/contact/" component={Contactame}/>
             </AnimatedSwitch>
     </div>
   );

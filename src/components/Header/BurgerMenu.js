@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
@@ -58,16 +59,16 @@ const Menu = ({ open }) => {
         <a href="/portfolio/">
             Home
         </a>
-        <a href="/portfolio/about">
+        <a href="/portfolio/about/">
             Sobre Mi
         </a>
-        <a href="/portfolio/technologies">
+        <a href="/portfolio/technologies/">
             Tecnologías
         </a>
-        <a href="/portfolio/projects">
+        <a href="/portfolio/projects/">
             Proyectos
         </a>
-        <a href="/portfolio/contact">
+        <a href="/portfolio/contact/">
             Contáctame
         </a>
     </StyledMenu>

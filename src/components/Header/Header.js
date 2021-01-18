@@ -77,16 +77,16 @@ const Header = () => {
                     <Link href="/portfolio/"> Home </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="/portfolio/about"> Sobre mi </Link>
+                    <Link href="/portfolio/about/"> Sobre mi </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="/portfolio/technologies"> Tecnologías </Link>
+                    <Link href="/portfolio/technologies/"> Tecnologías </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="/portfolio/projects"> Proyectos </Link>
+                    <Link href="/portfolio/projects/"> Proyectos </Link>
                 </Fade>
                 <Fade top>
-                    <Link href="/portfolio/contact"> Contáctame </Link>
+                    <Link href="/portfolio/contact/"> Contáctame </Link>
                 </Fade>
             </Nav> 
             <BurgerMenu />

@@ -45,7 +45,7 @@ const Contactame = () => {
             <ContainerIconos>
                 <a href="mailto: fedeleiva20@gmail.com"><Icono src={mail} /></a>
                 <a href="https://www.linkedin.com/in/federico-leiva/" target="_blank"><Icono src={linkedin} /></a>
-                <a href="https://wa.me/1140566523" target="_blank"><Icono src={wsp} /></a>
+                <a href="https://wa.me/+541140566523" target="_blank"><Icono src={wsp} /></a>
             </ContainerIconos>
         </Container>
     );

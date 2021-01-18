@@ -34,7 +34,7 @@ const ContainerTecnologias = styled.div`
 const ArrowUp = styled.div`
     color: rgba(201, 201, 201, 0.638);
     position: absolute;
-    top: 5%;
+    top: 10%;
     transition: all .1s linear .1s;
     :hover{
         color: white;

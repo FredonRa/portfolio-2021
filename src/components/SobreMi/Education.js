@@ -5,7 +5,10 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import {Fade, Bounce} from 'react-reveal/';
 
 const Titulo = styled.h1`
-    top: 40px;
+    font-size: 20px;
+    @media (min-width: 768px){
+        font-size: 28px;
+    }
 `
 
 const Container = styled.div`
@@ -16,18 +19,16 @@ const Container = styled.div`
     height: 100vh;
     z-index: 1;
     color: white;
-
-
 `
 
 const Parrafo = styled.p`
-    font-size: 22px;
+    font-size: 18px;
     color: white;
     font-weight: 500;
     margin: 20px 10% 0 10%;
-
     @media (min-width: 768px){
-        margin: 20px 30% 0 30%
+        margin: 20px 30% 0 30%;
+        font-size: 22px;
     }
 `
 
@@ -63,7 +64,7 @@ const Education = () => {
                     <Bounce right>
                         <ContainerArrow>
                                 <Arrow>
-                                    <Link to="/portfolio/about/course">
+                                    <Link to="/portfolio/about/course/">
                                         <KeyboardArrowRightIcon style={{fontSize: 60, textDecoration: "none"}} className="arrowRight"/>
                                     </Link>
                                 </Arrow>

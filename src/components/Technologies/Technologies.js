@@ -13,20 +13,21 @@ import {Fade} from 'react-reveal'
 
 
 const Imagen = styled.img`
-    width: 40px;
+    width: 30px;
     @media (min-width: 768px){
         width: 70px;
     }
 `
 
 const NombreTecnologia = styled.p`
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500;
 `
 
 const ContainerTecnologia = styled.div`
     /* background: red; */
-    width: 130px;
-    margin: 10px;
+    width: 90px;
+    margin: 3px;
     border-radius: 10px;
     transition: all .3s linear .3s;
     padding: 7px;
@@ -35,6 +36,10 @@ const ContainerTecnologia = styled.div`
         background: white;
         color: black;
         transition: all .1s linear .1s;
+    }
+    @media (min-width: 768px){
+        width: 140px;
+        margin: 10px;
     }
 `
 
